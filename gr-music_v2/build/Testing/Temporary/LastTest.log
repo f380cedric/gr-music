@@ -1,0 +1,42 @@
+Start testing: Feb 18 12:02 CET
+----------------------------------------------------------
+1/2 Testing: test_music_v2
+1/2 Test: test_music_v2
+Command: "/bin/sh" "/home/johan/Documents/GNU_Radio_Tutorials/Work/gr-music_v2/build/lib/test_music_v2_test.sh"
+Directory: /home/johan/Documents/GNU_Radio_Tutorials/Work/gr-music_v2/build/lib
+"test_music_v2" start time: Feb 18 12:02 CET
+Output:
+----------------------------------------------------------
+
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"test_music_v2" end time: Feb 18 12:02 CET
+"test_music_v2" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/2 Testing: qa_music_v2_cpp_cf
+2/2 Test: qa_music_v2_cpp_cf
+Command: "/bin/sh" "/home/johan/Documents/GNU_Radio_Tutorials/Work/gr-music_v2/build/python/qa_music_v2_cpp_cf_test.sh"
+Directory: /home/johan/Documents/GNU_Radio_Tutorials/Work/gr-music_v2/build/python
+"qa_music_v2_cpp_cf" start time: Feb 18 12:02 CET
+Output:
+----------------------------------------------------------
+AoA: 22.5
+AoA: 22.5
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.012s
+
+OK
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"qa_music_v2_cpp_cf" end time: Feb 18 12:02 CET
+"qa_music_v2_cpp_cf" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Feb 18 12:02 CET

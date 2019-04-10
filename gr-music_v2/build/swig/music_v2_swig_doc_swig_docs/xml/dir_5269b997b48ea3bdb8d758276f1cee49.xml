@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="dir_5269b997b48ea3bdb8d758276f1cee49" kind="dir">
+    <compoundname>music_v2</compoundname>
+    <innerfile refid="api_8h">api.h</innerfile>
+    <innerfile refid="music__v2__cpp__cf_8h">music_v2_cpp_cf.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/johan/Documents/GNU_Radio_Tutorials/Work/gr-music_v2/include/music_v2/"/>
+  </compounddef>
+</doxygen>

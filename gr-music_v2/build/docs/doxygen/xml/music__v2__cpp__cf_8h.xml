@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.11">
+  <compounddef id="music__v2__cpp__cf_8h" kind="file" language="C++">
+    <compoundname>music_v2_cpp_cf.h</compoundname>
+    <includes refid="api_8h" local="no">music_v2/api.h</includes>
+    <includes local="no">gnuradio/sync_decimator.h</includes>
+    <includedby refid="music__v2__cpp__cf__impl_8h" local="no">music_v2_cpp_cf_impl.h</includedby>
+    <incdepgraph>
+      <node id="12">
+        <label>gnuradio/sync_decimator.h</label>
+      </node>
+      <node id="10">
+        <label>music_v2/api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>gnuradio/attributes.h</label>
+      </node>
+      <node id="9">
+        <label>music_v2_cpp_cf.h</label>
+        <link refid="music_v2_cpp_cf.h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="14">
+        <label>music_v2_cpp_cf_impl.h</label>
+        <link refid="music__v2__cpp__cf__impl_8h"/>
+      </node>
+      <node id="13">
+        <label>music_v2_cpp_cf.h</label>
+        <link refid="music_v2_cpp_cf.h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classgr_1_1music__v2_1_1music__v2__cpp__cf" prot="public">gr::music_v2::music_v2_cpp_cf</innerclass>
+    <innernamespace refid="namespacegr">gr</innernamespace>
+    <innernamespace refid="namespacegr_1_1music__v2">gr::music_v2</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/johan/Documents/GNU_Radio_Tutorials/Work/gr-music_v2/include/music_v2/music_v2_cpp_cf.h"/>
+  </compounddef>
+</doxygen>
