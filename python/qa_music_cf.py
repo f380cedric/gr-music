@@ -1,37 +1,37 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# 
-# Copyright 2019 Johan Jacobs.
-# 
+#
+# Copyright 2020 "Johan Jacobs & Cédric Hannotier".
+#
 # This is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 3, or (at your option)
 # any later version.
-# 
+#
 # This software is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-# 
+#
 # You should have received a copy of the GNU General Public License
 # along with this software; see the file COPYING.  If not, write to
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
-# 
+#
 
 from gnuradio import gr, gr_unittest
 from gnuradio import blocks
-import music_v2_swig as music_v2
+import music_swig as music
 import numpy as np
 import math
 import cmath
 
-class qa_music_v2_cpp_cf (gr_unittest.TestCase):
+class qa_music_cf(gr_unittest.TestCase):
 
-    def setUp (self):
-        self.tb = gr.top_block ()
+    def setUp(self):
+        self.tb = gr.top_block()
 
-    def tearDown (self):
+    def tearDown(self):
         self.tb = None
 
     def test_001_t (self):
@@ -71,7 +71,7 @@ class qa_music_v2_cpp_cf (gr_unittest.TestCase):
         src1 = blocks.vector_source_c(sig1)
         src2 = blocks.vector_source_c(sig2)
         src3 = blocks.vector_source_c(sig3)
-        myblock = music_v2.music_v2_cpp_cf(numAnt, numSamp, numSrc, d, frequency)
+        myblock = music.music_cf(numAnt, numSamp, numSrc, d, frequency)
         dst = blocks.vector_sink_f()
 
         # Connect
@@ -91,4 +91,4 @@ class qa_music_v2_cpp_cf (gr_unittest.TestCase):
 
 
 if __name__ == '__main__':
-    gr_unittest.run(qa_music_v2_cpp_cf, "qa_music_v2_cpp_cf.xml")
+    gr_unittest.run(qa_music_cf)

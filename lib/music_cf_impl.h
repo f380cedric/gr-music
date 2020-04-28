@@ -1,32 +1,32 @@
 /* -*- c++ -*- */
-/* 
- * Copyright 2019 Johan Jacobs.
- * 
+/*
+ * Copyright 2020 "Johan Jacobs & Cédric Hannotier".
+ *
  * This is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 3, or (at your option)
  * any later version.
- * 
+ *
  * This software is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this software; see the file COPYING.  If not, write to
  * the Free Software Foundation, Inc., 51 Franklin Street,
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_MUSIC_V2_MUSIC_V2_CPP_CF_IMPL_H
-#define INCLUDED_MUSIC_V2_MUSIC_V2_CPP_CF_IMPL_H
+#ifndef INCLUDED_MUSIC_MUSIC_CF_IMPL_H
+#define INCLUDED_MUSIC_MUSIC_CF_IMPL_H
 
-#include <music_v2/music_v2_cpp_cf.h>
+#include <music/music_cf.h>
 
 namespace gr {
-  namespace music_v2 {
+  namespace music {
 
-    class music_v2_cpp_cf_impl : public music_v2_cpp_cf
+    class music_cf_impl : public music_cf
     {
      private:
       int d_numAnt;
@@ -36,17 +36,19 @@ namespace gr {
       float d_freq;
 
      public:
-      music_v2_cpp_cf_impl(int numAnt, int numSamp, int numSrc, float distance, float freq);
-      ~music_v2_cpp_cf_impl();
+      music_cf_impl(int numAnt, int numSamp, int numSrc, float distance, float freq);
+      ~music_cf_impl();
 
       // Where all the action really happens
-      int work(int noutput_items,
-         gr_vector_const_void_star &input_items,
-         gr_vector_void_star &output_items);
+      int work(
+              int noutput_items,
+              gr_vector_const_void_star &input_items,
+              gr_vector_void_star &output_items
+      );
     };
 
-  } // namespace music_v2
+  } // namespace music
 } // namespace gr
 
-#endif /* INCLUDED_MUSIC_V2_MUSIC_V2_CPP_CF_IMPL_H */
+#endif /* INCLUDED_MUSIC_MUSIC_CF_IMPL_H */
 

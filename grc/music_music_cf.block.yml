@@ -1,0 +1,37 @@
+id: music_music_cf
+label: music cf
+category: '[Music]'
+templates:
+  imports: import music
+  make: music.music_cf(${numAnt}, ${numSamp}, ${numSrc}, ${distance}, ${freq})
+parameters:
+- id: numAnt
+  label: 'Number of Rx'
+  dtype: int
+  default: '3'
+- id: numSamp
+  label: 'Number of samples'
+  dtype: int
+  default: '320'
+- id: numSrc
+  label: 'Number of Tx'
+  dtype: int
+  default: '1'
+- id: distance
+  label: 'Distance between Rx'
+  dtype: float
+  default: '0.06'
+- id: freq
+  label: 'Center Frequency [MHz]'
+  dtype: float
+  default: '2450'
+inputs:
+- label: in
+  domain: stream
+  dtype: complex
+  multiplicity: ${numAnt}
+outputs:
+- label: out
+  domain: stream
+  dtype: float
+file_format: 1

@@ -1,17 +1,17 @@
 /* -*- c++ -*- */
-/* 
- * Copyright 2019 Johan Jacobs.
- * 
+/*
+ * Copyright 2020 "Johan Jacobs & Cédric Hannotier".
+ *
  * This is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; either version 3, or (at your option)
  * any later version.
- * 
+ *
  * This software is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with this software; see the file COPYING.  If not, write to
  * the Free Software Foundation, Inc., 51 Franklin Street,
@@ -23,10 +23,9 @@
 #endif
 
 #include <gnuradio/io_signature.h>
-#include "music_v2_cpp_cf_impl.h"
+#include "music_cf_impl.h"
 #include <iostream>
 #include <armadillo>
-#include <math.h>
 #include <complex>
 #include <cmath>
 #include <random>
@@ -36,20 +35,21 @@
 using namespace arma;
 
 namespace gr {
-  namespace music_v2 {
+  namespace music {
 
-    music_v2_cpp_cf::sptr
-    music_v2_cpp_cf::make(int numAnt, int numSamp, int numSrc, float distance, float freq)
+    music_cf::sptr
+    music_cf::make(int numAnt, int numSamp, int numSrc, float distance, float freq)
     {
       return gnuradio::get_initial_sptr
-        (new music_v2_cpp_cf_impl(numAnt, numSamp, numSrc, distance, freq));
+        (new music_cf_impl(numAnt, numSamp, numSrc, distance, freq));
     }
+
 
     /*
      * The private constructor
      */
-    music_v2_cpp_cf_impl::music_v2_cpp_cf_impl(int numAnt, int numSamp, int numSrc, float distance, float freq)
-      : gr::sync_decimator("music_v2_cpp_cf",
+    music_cf_impl::music_cf_impl(int numAnt, int numSamp, int numSrc, float distance, float freq)
+      : gr::sync_decimator("music_cf",
               gr::io_signature::make(1, numAnt, sizeof(gr_complex)),
               gr::io_signature::make(1, 1, sizeof(float)), numSamp),
         d_numAnt(numAnt),
@@ -62,12 +62,12 @@ namespace gr {
     /*
      * Our virtual destructor.
      */
-    music_v2_cpp_cf_impl::~music_v2_cpp_cf_impl()
+    music_cf_impl::~music_cf_impl()
     {
     }
 
     int
-    music_v2_cpp_cf_impl::work(int noutput_items,
+    music_cf_impl::work(int noutput_items,
         gr_vector_const_void_star &input_items,
         gr_vector_void_star &output_items)
     {
@@ -150,6 +150,6 @@ namespace gr {
       return noutput_items;
     }
 
-  } /* namespace music_v2 */
+  } /* namespace music */
 } /* namespace gr */
 

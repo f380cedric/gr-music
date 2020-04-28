@@ -19,16 +19,17 @@
 # The presence of this file turns this directory into a Python package
 
 '''
-This is the GNU Radio MUSIC_V2 module. Place your Python package
+This is the GNU Radio MUSIC module. Place your Python package
 description here (python/__init__.py).
 '''
+from __future__ import unicode_literals
 
-# import swig generated symbols into the music_v2 namespace
+# import swig generated symbols into the music namespace
 try:
-	# this might fail if the module is python-only
-	from music_v2_swig import *
+    # this might fail if the module is python-only
+    from .music_swig import *
 except ImportError:
-	pass
+    pass
 
 # import any pure python here
 #
